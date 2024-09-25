@@ -17,8 +17,10 @@ header {
     background: #222;
     color: #fff;
     padding: 20px;
-    text-align: left;
+    text-align: left; /* Aligns text to the left */
+    padding-left: 20px; /* Adds padding to the left */
 }
+header h1
 
 nav ul {
     list-style-type: none;
