@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         images.forEach((image) => {
             const imagePosition = image.getBoundingClientRect().top + window.scrollY;
 
-            if (scrollPosition > imagePosition + 100) { // Adjust 100 for earlier/later fade-in
+            if (scrollPosition > imagePosition + 150) { 
                 image.classList.add("fade-in");
             }
         });
