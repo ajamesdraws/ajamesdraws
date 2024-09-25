@@ -47,31 +47,34 @@ footer {
     background: #222;
     color: #fff;
 }
-
-.portfolio-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
+.portfolio-gallery a {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust the width of the anchor tags */
+    max-width: calc(33.333% - 20px); /* Same as above */
+    display: block; /* Ensures the anchor takes up space */
 }
 
 .portfolio-gallery img {
-    flex: 1 1 calc(33.333% - 40px);
-    max-width: calc(33.333% - 40px);
-    height: auto;
-    display: block;
+    width: 100%; /* Make image fill the anchor */
+    height: auto; /* Keep aspect ratio */
+    display: block; /* Remove bottom space */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.portfolio-gallery img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+
 @media (max-width: 768px) {
-    .portfolio-gallery img {
+    .portfolio-gallery a {
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
-    .portfolio-gallery img {
+    .portfolio-gallery a {
         flex: 1 1 100%;
         max-width: 100%;
     }
