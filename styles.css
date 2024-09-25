@@ -56,10 +56,10 @@ footer {
 }
 
 .portfolio-gallery img {
-    width: 100%;
+    flex: 1 1 calc(33.333% - 40px); /* Each image will take up one-third of the row, minus spacing */
+    max-width: calc(33.333% - 40px);
     height: auto;
     display: block;
-    transition: transform 0.3s ease; /* Add a hover effect if desired */
 }
 
 .portfolio-gallery img:hover {
