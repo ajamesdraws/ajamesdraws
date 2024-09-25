@@ -48,3 +48,13 @@ footer {
     background: #222;
     color: #fff;
 }
+
+.portfolio-gallery img {
+    opacity: 0; /* Initially hide images */
+    transition: opacity 0.5s ease-in; /* Smooth transition for fading */
+}
+
+.portfolio-gallery img.fade-in {
+    opacity: 1; /* Fully visible when class is added */
+}
+
