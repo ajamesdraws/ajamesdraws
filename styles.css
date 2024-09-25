@@ -49,6 +49,14 @@ footer {
     color: #fff;
 }
 
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap to the next line */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center items vertically if needed */
+    margin: 0 auto; /* Center the gallery itself */
+}
+
 .portfolio-gallery img {
     opacity: 0; /* Initially hide images */
     transition: opacity 0.8s ease-in; /* Smooth transition for fading */
