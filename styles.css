@@ -49,20 +49,21 @@ footer {
 }
 
 .portfolio-gallery {
-    display: flex;
-    flex-wrap: wrap; /* Allows images to wrap to the next line */
-    justify-content: center; /* Center images horizontally */
-    align-items: center; /* Center items vertically if needed */
-    margin: 0 auto; /* Center the gallery itself */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
 }
 
 .portfolio-gallery img {
-    opacity: 0; /* Initially hide images */
-    transition: opacity 0.8s ease-in; /* Smooth transition for fading */
-    width: 80%; /* Make images responsive */
-    max-width: 800px; /* Set a maximum width for images */
-    height: auto; /* Maintain aspect ratio */
-    margin: 10px; /* Add some space between images */
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* Add a hover effect if desired */
+}
+
+.portfolio-gallery img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .portfolio-gallery img.fade-in {
