@@ -46,17 +46,31 @@ footer {
     background: #222;
     color: #fff;
 }
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Create flexible columns */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center the images within each grid cell */
+}
+
 .portfolio-gallery a {
-    flex: 1 1 calc(33.333% - 20px); /* Adjust the width of the anchor tags */
-    max-width: calc(33.333% - 20px); /* Same as above */
     display: block; /* Ensures the anchor takes up space */
+    width: 100%; /* Make sure the images take up the full width of the grid cell */
 }
 
 .portfolio-gallery img {
-    width: 100%; /* Make image fill the anchor */
-    height: auto; /* Keep aspect ratio */
-    display: block; /* Remove bottom space */
+    width: 100%; /* Make the image fill the anchor */
+    height: auto; /* Keep the aspect ratio */
+    display: block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slight vertical offset for animation */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.portfolio-gallery img.fade-in {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
 }
 
 .portfolio-gallery img:hover {
