@@ -98,3 +98,33 @@ footer {
     transform: translateY(0);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
+
+.homepage-main {
+    flex: 1; /* Fills the available vertical space */
+    background: url('images/homepage-bg.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the area */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 50px 20px;
+    min-height: calc(100vh - 160px); /* Adjust the height based on header and footer */
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.overlay h2 {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+}
+
+.overlay p {
+    font-size: 1.5em;
+}
