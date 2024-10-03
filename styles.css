@@ -17,23 +17,31 @@ header {
     background: #222;
     color: #fff;
     padding: 20px;
-    text-align: left; /* Aligns text to the left */
-    padding-left: 20px; /* Adds padding to the left */
+    display: flex; /* Flexbox to align the title and navigation side by side */
+    justify-content: space-between; /* Ensures the title and nav are on opposite sides */
+    align-items: center; /* Vertically centers the items */
+}
+
+header h1 {
+    margin: 0; /* Removes default margin that might push the title */
 }
 
 nav ul {
     list-style-type: none;
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    display: flex; /* Displays links horizontally */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 15px; /* Spacing between links */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+
 
 main {
     flex: 1; /* This allows the main content to grow and take up available space */
